@@ -10,7 +10,11 @@ export default async function Home() {
                 <Sidebar />
                 <div className='flex-1'>
                     <Navbar />
-                    <NotesList />
+                    <div className='flex justify-between h-[calc(100vh-81.47px)]'>
+                        <NotesList />
+                        <div className='py-5 px-6 flex-1'>Main Content</div>
+                        <div className='w-[258px] py-5 px-4 border-l border-l-neutral-200'>Left Content</div>
+                    </div>
                 </div>
             </div>
         </HydrateClient>

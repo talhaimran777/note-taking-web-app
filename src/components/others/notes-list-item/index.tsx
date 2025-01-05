@@ -17,9 +17,9 @@ const NotesListItem = ({
     return (
         <div
             className={clsx({
-                'flex flex-col gap-3 p-2 rounded-lg': true,
-                'bg-neutral-100 border-b-unset': isActive,
-                'border-b border-b-neutral-200': !isActive,
+                'flex flex-col gap-3 pb-3 px-2 rounded-lg': true,
+                'bg-neutral-100 border-b-unset pt-3': isActive,
+                '[&:not(:last-child)]:border-b border-b-neutral-200': !isActive,
             })}
         >
             <Typography
