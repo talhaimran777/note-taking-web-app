@@ -48,7 +48,7 @@ const notesList = [
 
 const NotesList = () => {
     return (
-        <div className='flex flex-col gap-4 max-w-[290px] border-r border-r-neutral-200  overflow-auto pb-5'>
+        <>
             <div className='sticky top-0 px-8 pt-5 bg-white'>
                 <Button variant='primary' className='w-full'>
                     + Create New Note
@@ -56,8 +56,9 @@ const NotesList = () => {
             </div>
 
             <div className='flex flex-col gap-3 px-8'>
-                {notesList.map((note) => (
+                {notesList.map((note, index) => (
                     <NotesListItem
+                        key={index}
                         title={note.title}
                         tags={note.tags}
                         lastEditedAtDate={note.lastEditedAtDate}
@@ -65,7 +66,7 @@ const NotesList = () => {
                     />
                 ))}
             </div>
-        </div>
+        </>
     )
 }
 

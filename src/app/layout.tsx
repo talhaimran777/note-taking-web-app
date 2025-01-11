@@ -1,4 +1,7 @@
+import Navbar from '~/components/others/navbar'
+import Sidebar from '~/components/others/sidebar'
 import '~/styles/globals.css'
+import { HydrateClient } from '~/trpc/server'
 
 import { GeistSans } from 'geist/font/sans'
 import { type Metadata } from 'next'
@@ -23,7 +26,14 @@ export default async function RootLayout({
     return (
         <html lang='en' className={`${GeistSans.variable}`}>
             <body>
-                <TRPCReactProvider>{children}</TRPCReactProvider>
+                <TRPCReactProvider>
+                    <HydrateClient>
+                        <div className='flex h-screen w-full'>
+                            <Sidebar />
+                            <div className='flex-1'>{children}</div>
+                        </div>
+                    </HydrateClient>
+                </TRPCReactProvider>
             </body>
         </html>
     )

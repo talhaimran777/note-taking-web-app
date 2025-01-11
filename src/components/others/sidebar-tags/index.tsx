@@ -1,6 +1,6 @@
 import TagIcon from '~/images/icon-tag.svg'
-import TagIconActive from '~/images/icon-tag-active.svg'
-import SidebarItem from '~/components/others/sidebar/components/sidebar-item'
+// import TagIconActive from '~/images/icon-tag-active.svg'
+import SidebarItem from '~/components/others/sidebar-item'
 import Typography from '~/components/ui/custom/typography'
 
 // TODO: Use actual data
@@ -12,8 +12,8 @@ const SIDEBAR_TAGS = [
     },
     {
         text: 'Dev',
-        icon: TagIconActive,
-        isActive: true,
+        icon: TagIcon,
+        isActive: false,
     },
     {
         text: 'Fitness',

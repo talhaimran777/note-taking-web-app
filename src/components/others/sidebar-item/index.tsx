@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import Typography from '~/components/ui/custom/typography'
 import ChevronRight from '~/images/icon-chevron-right.svg'
 
@@ -7,10 +8,12 @@ const SidebarItem = ({
     icon,
     text,
     isActive,
+    link,
 }: {
     icon: any
     text: string
     isActive: boolean
+    link: string
 }) => {
     return (
         <div
@@ -25,7 +28,11 @@ const SidebarItem = ({
                     'flex flex-1 items-center gap-2': true,
                 })}
             >
-                <Image src={icon} alt={text} className='h-5 w-5' />
+                {link && (
+                    <Link href={link}>
+                        <Image src={icon} alt={text} className='h-5 w-5' />
+                    </Link>
+                )}
                 <Typography
                     presetType={4}
                     text={text}
