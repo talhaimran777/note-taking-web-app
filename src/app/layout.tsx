@@ -29,7 +29,7 @@ export default async function RootLayout({
                 <TRPCReactProvider>
                     <HydrateClient>
                         <div className='flex h-screen w-full'>
-                            <Sidebar />
+                            {/* <Sidebar /> */}
                             <div className='flex-1'>{children}</div>
                         </div>
                     </HydrateClient>
