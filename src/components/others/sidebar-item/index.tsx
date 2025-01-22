@@ -13,9 +13,9 @@ const SidebarItem = ({
     icon: any
     text: string
     isActive: boolean
-    link: string
+    link?: string
 }) => {
-    return (
+    const sidebarItem = (
         <div
             className={clsx({
                 'flex justify-between items-center px-3 py-[10px]': true,
@@ -28,11 +28,7 @@ const SidebarItem = ({
                     'flex flex-1 items-center gap-2': true,
                 })}
             >
-                {link && (
-                    <Link href={link}>
-                        <Image src={icon} alt={text} className='h-5 w-5' />
-                    </Link>
-                )}
+                <Image src={icon} alt={text} className='h-5 w-5' />
                 <Typography
                     presetType={4}
                     text={text}
@@ -45,6 +41,12 @@ const SidebarItem = ({
             {isActive && <Image src={ChevronRight} alt='Chevron right' />}
         </div>
     )
+
+    if (!link) {
+        return sidebarItem
+    }
+
+    return <Link href={link}>{sidebarItem}</Link>
 }
 
 export default SidebarItem

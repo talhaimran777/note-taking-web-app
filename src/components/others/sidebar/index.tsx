@@ -16,13 +16,13 @@ const Sidebar = () => {
                         text: 'All Notes',
                         icon: HomeIconActive,
                         isActive: true,
-                        link: "/all-notes"
+                        link: '/all-notes',
                     },
                     {
                         text: 'Archive',
                         icon: ArchiveIcon,
                         isActive: false,
-                        link: "/all-notes"
+                        link: '/all-notes',
                     },
                 ]}
             />

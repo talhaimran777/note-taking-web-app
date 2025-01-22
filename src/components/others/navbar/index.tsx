@@ -12,7 +12,7 @@ const Navbar = ({ pageTitle }: { pageTitle: string }) => {
                     presetType={1}
                     className='text-neutral-950'
                 />
-                <Link href="/settings">
+                <Link href='/settings'>
                     <Image
                         src={SettingsIcon}
                         alt='Settings icon'
