@@ -12,9 +12,7 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
             <div className='flex flex-col gap-2 border-r border-r-neutral-200 overflow-auto pl-8 pr-4 py-6 w-[258px]'>
                 {leftChild}
             </div>
-            <div className='py-5 px-6 flex flex-1 flex-col gap-5'>
-                {rightChild}
-            </div>
+            <div className='p-8 flex flex-1 flex-col gap-5'>{rightChild}</div>
         </div>
     )
 }
